@@ -46,7 +46,7 @@ class WatermarkApp:
         # Add watermark to image
         draw = ImageDraw.Draw(self.image)
         font = ImageFont.truetype("arial.ttf", 36)
-        draw.text((10, 10), watermark_text, font=font)
+        draw.text((10, 10), watermark_text, font=font, fill='black')
 
         # Update image on canvas
         self.photo_image = ImageTk.PhotoImage(self.image)
