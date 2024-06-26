@@ -9,6 +9,8 @@ The Watermark App is a simple GUI tool designed to allow users to add watermarks
 
 - **Image Upload:** Users can easily upload images from their local storage.
 - **Custom Watermark:** Users can add custom text as a watermark to their uploaded image.
+- **Save Image:** Users can save the modified image with the watermark.
+- **Rotate Image:** Users can rotate the uploaded image by 90 degrees.
 - **Preview:** A canvas is available to display and preview the image with the watermark.
 
 ## Prerequisites
@@ -38,6 +40,8 @@ python watermark_app.py
 4. Use the "Upload Image" button to select and upload your image.
 5. Enter your desired watermark text into the provided input field.
 6. Click the "Add Watermark" button to embed the watermark onto your image.
+7. Click the "Save Image" button to save the modified image.
+8. Click the "Rotate Image" button to rotate the image by 90 degrees.
 
 ## Contributing
 
@@ -51,5 +55,9 @@ This project is licensed under the MIT License.
 
 - The `tkinter` library for the GUI components.
 - The Python Imaging Library (PIL) for image processing capabilities.
+
+## Author
+
+This project was created by Stanisław Dutkiewicz.
 
 Thank you for using the Watermark App!

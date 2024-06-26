@@ -1,9 +1,3 @@
-
----
-
-### documentation.md
-
-```markdown
 # Watermark App Documentation
 
 ## Introduction
@@ -23,6 +17,8 @@ The primary class representing the Watermark App.
 - **master**: The main window for the tkinter app.
 - **upload_button**: Button for uploading images.
 - **add_button**: Button to add the watermark to the uploaded image.
+- **save_button**: Button to save the modified image.
+- **rotate_button**: Button to rotate the uploaded image.
 - **canvas**: Canvas widget to display the image.
 - **watermark_entry**: Entry widget to input the watermark text.
 
@@ -33,10 +29,16 @@ The primary class representing the Watermark App.
   - **Description**: Initializes the WatermarkApp object and sets up the GUI components.
 
 - **upload_image(self)**:
-  - **Description**: Opens a file dialog to select an image and displays it on the canvas. Enables the "Add Watermark" button once an image is uploaded.
+  - **Description**: Opens a file dialog to select an image and displays it on the canvas. Enables the "Add Watermark," "Save Image," and "Rotate Image" buttons once an image is uploaded.
 
 - **add_watermark(self)**:
   - **Description**: Retrieves the watermark text from the entry field and adds it to the image. Then, it updates the image on the canvas.
+
+- **save_image(self)**:
+  - **Description**: Opens a file dialog to save the modified image.
+
+- **rotate_image(self)**:
+  - **Description**: Rotates the uploaded image by 90 degrees and updates the image on the canvas.
 
 ## Execution
 
