@@ -15,12 +15,13 @@ The primary class representing the Watermark App.
 #### Attributes:
 
 - **master**: The main window for the tkinter app.
-- **upload_button**: Button for uploading images.
-- **add_button**: Button to add the watermark to the uploaded image.
-- **save_button**: Button to save the modified image.
-- **rotate_button**: Button to rotate the uploaded image.
+- **menu**: The main menu of the application.
+- **file_menu**: Submenu for file operations (upload, save, rotate).
+- **watermark_menu**: Submenu for watermark operations (add, edit, remove).
 - **canvas**: Canvas widget to display the image.
-- **watermark_entry**: Entry widget to input the watermark text.
+- **image**: The currently loaded image.
+- **original_image**: Backup of the original image to allow removing watermarks.
+- **watermark_text**: The current watermark text.
 
 #### Methods:
 
@@ -29,16 +30,25 @@ The primary class representing the Watermark App.
   - **Description**: Initializes the WatermarkApp object and sets up the GUI components.
 
 - **upload_image(self)**:
-  - **Description**: Opens a file dialog to select an image and displays it on the canvas. Enables the "Add Watermark," "Save Image," and "Rotate Image" buttons once an image is uploaded.
+  - **Description**: Opens a file dialog to select an image and displays it on the canvas. Enables the "Save Image," "Rotate Image," and "Add Watermark" options once an image is uploaded.
 
 - **add_watermark(self)**:
-  - **Description**: Retrieves the watermark text from the entry field and adds it to the image. Then, it updates the image on the canvas.
+  - **Description**: Prompts the user to enter watermark text and applies it to the image. Changes the menu option to "Edit Watermark" and enables the "Edit Watermark" and "Remove Watermark" options.
+
+- **edit_watermark(self)**:
+  - **Description**: Prompts the user to edit the current watermark text and applies the updated text to the image.
+
+- **remove_watermark(self)**:
+  - **Description**: Restores the image to its original state, removing any applied watermark. Disables the "Edit Watermark" and "Remove Watermark" options.
+
+- **apply_watermark(self)**:
+  - **Description**: Adds the current watermark text to the image and updates the canvas.
 
 - **save_image(self)**:
   - **Description**: Opens a file dialog to save the modified image.
 
 - **rotate_image(self)**:
-  - **Description**: Rotates the uploaded image by 90 degrees and updates the image on the canvas.
+  - **Description**: Rotates the image by 90 degrees and updates the canvas.
 
 ## Execution
 
